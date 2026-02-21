@@ -91,7 +91,7 @@ Stream<PackageInfo> packagesStream = DevicePackages.getInstalledPackagesAsStream
 To get a specific application info, provide its package id:
 
 ```dart
-PackageInfo package = await DevicePackages.getPackage('io.alexrintt.kanade');
+PackageInfo package = await DevicePackages.getPackage('your.app.package');
 ```
 
 ## Check if an application is installed
@@ -99,7 +99,7 @@ PackageInfo package = await DevicePackages.getPackage('io.alexrintt.kanade');
 To check if an app is installed (via its package id):
 
 ```dart
-bool isInstalled = await DevicePackages.isPackageInstalled('io.alexrintt.kanade');
+bool isInstalled = await DevicePackages.isPackageInstalled('your.app.package');
 ```
 
 ## Open a package
@@ -107,7 +107,7 @@ bool isInstalled = await DevicePackages.isPackageInstalled('io.alexrintt.kanade'
 To open a package (on Android the package must have a launch Intent).
 
 ```dart
-DevicePackages.openPackage('io.alexrintt.kanade');
+DevicePackages.openPackage('your.app.package');
 ```
 
 ## Open a package settings screen
@@ -115,7 +115,7 @@ DevicePackages.openPackage('io.alexrintt.kanade');
 To open package settings:
 
 ```dart
-DevicePackages.openPackageSettings('io.alexrintt.kanade');
+DevicePackages.openPackageSettings('your.app.package');
 ```
 
 ## Uninstall package
@@ -132,7 +132,7 @@ To open the screen to uninstall a package:
 2. Call this method:
 
 ```dart
-DevicePackages.uninstallPackage('io.alexrintt.kanade');
+DevicePackages.uninstallPackage('your.app.package');
 ```
 
 ## Install package
@@ -178,7 +178,7 @@ If you only need events for a single app, just use the `Stream` API, like so:
 
 ```dart
 DevicePackages.listenToPackageEvents().where(
-  (PackageEvent event) => event.packageId == 'io.alexrintt.kanade'
+  (PackageEvent event) => event.packageId == 'your.app.package'
 )
 ```
 
